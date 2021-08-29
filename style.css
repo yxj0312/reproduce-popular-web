@@ -63,3 +63,13 @@ nav ul {
   justify-content: center;
   margin: 20px 0;
 }
+
+button {
+  background: none;
+  color: white;
+  border: none;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+}
