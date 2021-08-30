@@ -78,3 +78,13 @@ button:hover {
   color:lightgray
 }
 
+.menu {
+  position: absolute;
+  background: white;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.meun-products {
+  width: 200px;
+}
