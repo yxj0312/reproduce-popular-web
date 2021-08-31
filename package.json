@@ -8,5 +8,8 @@
   },
   "devDependencies": {
     "vite": "^2.5.1"
+  },
+  "dependencies": {
+    "postcss-nesting": "^8.0.1"
   }
 }
