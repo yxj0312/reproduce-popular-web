@@ -88,3 +88,7 @@ button:hover {
 .menu-products {
   width: 200px;
 }
+
+h1 {
+  color: red;
+}
