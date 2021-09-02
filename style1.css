@@ -64,6 +64,12 @@ nav ul {
   margin: 20px 0;
 }
 
+nav ul li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
 button {
   background: none;
   color: white;
