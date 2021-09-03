@@ -27,4 +27,9 @@ function handleLeave(params) {
     const menu = this.querySelector('.menu')
 
     menu.classList.remove('menu-enter','menu-enter-active')
+   
+    menu.classList.add('menu-leave')
+    setTimeout(() => menu.classList.add('menu-leave-active'), 50);
+
+    setTimeout(() => menu.classList.remove('menu-leave', 'menu-leave-active'), 200);
 }

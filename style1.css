@@ -106,6 +106,17 @@ button:hover {
   transform: translateY(0);
 }
 
+.menu.menu-leave {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.menu.menu-leave-active {
+  opacity: 0;
+  transform: translateY(-40px);
+}
+
 .menu-products {
   width: 200px;
 }
