@@ -13,13 +13,17 @@
 
 const menuItems = document.querySelectorAll('nav ul li')
 
-menuItems.forEach(menuItem = menuItem.addEventListener('mouseenter', handleEnter))
-menuItems.forEach(menuItem = menuItem.addEventListener('mouseleave', handleLeave))
+menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
+menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
 
 function handleEnter(params) {
-    
+    const menu = this.querySelector('.menu')
+
+    menu.classList.add('menu-enter')
 }
 
 function handleLeave(params) {
-    
+    const menu = this.querySelector('.menu')
+
+    menu.classList.remove('menu-enter')
 }

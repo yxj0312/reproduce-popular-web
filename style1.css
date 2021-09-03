@@ -68,6 +68,7 @@ nav ul li {
   position: relative;
   display: flex;
   justify-content: center;
+  padding: 10px;
 }
 
 button {
@@ -91,6 +92,10 @@ button:hover {
   border-radius: 5px;
   padding: 10px;
   top: 100%;
+}
+
+.menu-enter {
+  display: block;
 }
 
 .menu-products {
