@@ -85,6 +85,7 @@ button:hover {
 }
 
 .menu {
+  display:none;
   position: absolute;
   background: white;
   border-radius: 5px;
