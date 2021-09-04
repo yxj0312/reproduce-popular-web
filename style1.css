@@ -90,6 +90,10 @@ button:hover {
   left:0;
   width: 100px;
   height: 100px;
+  background: white;
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
 }
 
 .menu {
