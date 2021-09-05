@@ -19,11 +19,13 @@ menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeav
 
 function handleEnter() {
     const menu = this.querySelector('.menu')
-    console.log(menuBackground)
 
     menu.classList.add('menu-enter')
-    menuBackground.classList.add('next')
     setTimeout(() => menu.classList.add('menu-enter-active'), 50);
+
+    const menuCoords = menu.getBoundingClientRect()
+
+
 }
 
 function handleLeave(params) {
