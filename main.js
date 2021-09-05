@@ -12,6 +12,7 @@
 // `
 
 const menuItems = document.querySelectorAll('nav ul li')
+const menuBackground = document.querySelectorAll('.menu-background')
 
 menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
 menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
