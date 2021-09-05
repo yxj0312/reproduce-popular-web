@@ -12,15 +12,17 @@
 // `
 
 const menuItems = document.querySelectorAll('nav ul li')
-const menuBackground = document.querySelectorAll('.menu-background')
+const menuBackground = document.querySelector('.menu-background')
 
 menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
 menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
 
-function handleEnter(params) {
+function handleEnter() {
     const menu = this.querySelector('.menu')
+    console.log(menuBackground)
 
     menu.classList.add('menu-enter')
+    menuBackground.classList.add('next')
     setTimeout(() => menu.classList.add('menu-enter-active'), 50);
 }
 
