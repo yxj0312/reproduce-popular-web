@@ -21,6 +21,7 @@ function handleEnter() {
     const menu = this.querySelector('.menu')
 
     menu.classList.add('menu-enter')
+    menuBackground.classList.add('open')
     setTimeout(() => menu.classList.add('menu-enter-active'), 50);
 
     const menuCoords = menu.getBoundingClientRect()
