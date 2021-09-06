@@ -40,6 +40,8 @@ function handleLeave(params) {
     menu.classList.remove('menu-enter','menu-enter-active')
    
     menu.classList.add('menu-leave')
+    menuBackground.classList.remove('open')
+
     setTimeout(() => menu.classList.add('menu-leave-active'), 50);
 
     setTimeout(() => menu.classList.remove('menu-leave', 'menu-leave-active'), 200);
