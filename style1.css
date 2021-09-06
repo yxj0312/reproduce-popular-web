@@ -103,6 +103,13 @@ button:hover {
   opacity: 1;
 }
 
+.arrow {
+   position: absolute;
+   width: 14px;
+   height: 14px;
+   background: white;
+}
+
 .menu-background.next {
   top: 200px;
   left: 200px;
