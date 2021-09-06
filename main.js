@@ -28,7 +28,7 @@ function handleEnter() {
 
     menuBackground.style.setProperty('width',`${menuCoords.width}px`)
     menuBackground.style.setProperty('height',`${menuCoords.height}px`)
-    menuBackground.style.setProperty('top',`${menuCoords.top}px`)
+    menuBackground.style.setProperty('top',`${menuCoords.top + window.scrollY}px`)
     menuBackground.style.setProperty('left',`${menuCoords.left}px`)
 
 
