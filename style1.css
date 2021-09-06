@@ -119,23 +119,19 @@ button:hover {
 .menu.menu-enter {
   display: block;
   opacity: 0;
-  transform: translateY(-40px);
 }
 
 .menu.menu-enter-active {
   opacity: 1;
-  transform: translateY(0);
 }
 
 .menu.menu-leave {
   display: block;
   opacity: 1;
-  transform: translateY(0);
 }
 
 .menu.menu-leave-active {
   opacity: 0;
-  transform: translateY(-40px);
 }
 
 .menu-products {
