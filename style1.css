@@ -108,6 +108,7 @@ button:hover {
    width: 14px;
    height: 14px;
    background: white;
+   transform: rotate(45deg) translateY(-50%);
 }
 
 .menu-background.next {
