@@ -97,6 +97,7 @@ button:hover {
   display: flex;
   justify-content: center;
   transition: all 200ms;
+  transform-origin: 0 0;
 }
 
 .menu-background.open {
