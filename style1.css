@@ -111,7 +111,7 @@ button:hover {
    height: 14px;
    background: white;
    transform: rotate(45deg) translateY(-50%);
-   transition: all 100ms;
+   transition: all 200ms;
 }
 
 .arrow.open {
