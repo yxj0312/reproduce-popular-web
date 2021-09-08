@@ -32,11 +32,12 @@ function handleEnter() {
     // menuBackground.style.setProperty('left',`${menuCoords.left}px`)
 
     menuBackground.style.setProperty('transform',
-    
-    `translate(${menuCoords.width}px,${menuCoords.top + window.scrollY}px)
+    `
+      translate(${menuCoords.left}px,${menuCoords.top + window.scrollY}px)
       scaleX(${menuCoords.width/100})  
       scaleY(${menuCoords.height/100})
     `
+
     
     
     )
