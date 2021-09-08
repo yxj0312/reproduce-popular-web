@@ -113,6 +113,10 @@ button:hover {
    transition: all 100ms;
 }
 
+.arrow.open {
+  opacity: 1;
+}
+
 .menu-background.next {
   top: 200px;
   left: 200px;
