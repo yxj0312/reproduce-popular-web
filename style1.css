@@ -155,7 +155,13 @@ button:hover {
 }
 
 .menu-products {
-  width: 200px;
+  width: 560px;
+}
+
+.menu-products.gird {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 100px;
 }
 
 .menu-developers {
