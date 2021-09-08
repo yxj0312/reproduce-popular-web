@@ -24,6 +24,7 @@ function handleEnter() {
 
     menu.classList.add('menu-enter')
     menuBackground.classList.add('open')
+    arrow.classList.add('open')
     setTimeout(() => menu.classList.add('menu-enter-active'), 50);
 
     const menuCoords = menu.getBoundingClientRect()
@@ -57,6 +58,7 @@ function handleLeave(params) {
    
     menu.classList.add('menu-leave')
     menuBackground.classList.remove('open')
+    arrow.classList.remove('open')
 
     setTimeout(() => menu.classList.add('menu-leave-active'), 50);
 
