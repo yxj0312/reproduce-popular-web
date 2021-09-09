@@ -11,6 +11,9 @@
 //   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 // `
 
+import router from "./router/index"
+createApp(App).use(router).mount('#app')
+
 const menuItems = document.querySelectorAll('nav ul li')
 const menuBackground = document.querySelector('.menu-background')
 const nav = document.querySelector('nav ul')
