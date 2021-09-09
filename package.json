@@ -11,6 +11,6 @@
   },
   "dependencies": {
     "postcss-nested": "^5.0.6",
-    "vue-router": "^3.5.2"
+    "vue-router": "^4.0.11"
   }
 }
