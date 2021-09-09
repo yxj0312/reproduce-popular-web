@@ -10,7 +10,8 @@
 //   <img src="./favicon.svg">
 //   <a href="https://vitejs.dev/guide/features.html" target="_blank">Documentation</a>
 // `
-
+import { createApp } from 'vue'
+import App from './App.vue'
 import router from "./router/index"
 createApp(App).use(router).mount('#app')
 
