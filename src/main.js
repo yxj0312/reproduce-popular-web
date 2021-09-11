@@ -12,8 +12,9 @@
 // `
 import { createApp } from 'vue'
 import App from './App.vue'
-
+import './assets/styles/index.css'
 createApp(App).mount('#app')
+
 
 // const menuItems = document.querySelectorAll('nav ul li')
 // const menuBackground = document.querySelector('.menu-background')
