@@ -12,60 +12,59 @@
 // `
 import { createApp } from 'vue'
 import App from './App.vue'
-import router from "./router"
-import './assets/styles/index.css'
-createApp(App).use(router).mount('#app')
 
-const menuItems = document.querySelectorAll('nav ul li')
-const menuBackground = document.querySelector('.menu-background')
-const nav = document.querySelector('nav ul')
-const arrow = document.querySelector('.arrow')
+createApp(App).mount('#app')
 
-menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
-menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
+// const menuItems = document.querySelectorAll('nav ul li')
+// const menuBackground = document.querySelector('.menu-background')
+// const nav = document.querySelector('nav ul')
+// const arrow = document.querySelector('.arrow')
 
-function handleEnter() {
-    const menu = this.querySelector('.menu')
+// menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
+// menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
 
-    menu.classList.add('menu-enter')
-    menuBackground.classList.add('open')
-    arrow.classList.add('open')
-    setTimeout(() => menu.classList.add('menu-enter-active'), 50);
+// function handleEnter() {
+//     const menu = this.querySelector('.menu')
 
-    const menuCoords = menu.getBoundingClientRect()
-    const navCoords = nav.getBoundingClientRect()
+//     menu.classList.add('menu-enter')
+//     menuBackground.classList.add('open')
+//     arrow.classList.add('open')
+//     setTimeout(() => menu.classList.add('menu-enter-active'), 50);
 
-    // menuBackground.style.setProperty('width',`${menuCoords.width}px`)
-    // menuBackground.style.setProperty('height',`${menuCoords.height}px`)
-    // menuBackground.style.setProperty('top',`${menuCoords.top + window.scrollY}px`)
-    // menuBackground.style.setProperty('left',`${menuCoords.left}px`)
+//     const menuCoords = menu.getBoundingClientRect()
+//     const navCoords = nav.getBoundingClientRect()
 
-    menuBackground.style.setProperty('transform',
-    `
-      translate(${menuCoords.left}px,${menuCoords.top + window.scrollY}px)
-      scaleX(${menuCoords.width/100})  
-      scaleY(${menuCoords.height/100})
-    `
-    )
+//     // menuBackground.style.setProperty('width',`${menuCoords.width}px`)
+//     // menuBackground.style.setProperty('height',`${menuCoords.height}px`)
+//     // menuBackground.style.setProperty('top',`${menuCoords.top + window.scrollY}px`)
+//     // menuBackground.style.setProperty('left',`${menuCoords.left}px`)
 
-    arrow.style.setProperty('transform',
-    `
-      translate(${menuCoords.left + (menuCoords.width / 2) - 7}px,${menuCoords.top - navCoords.top}px)
-      rotate(45deg) translateY(-50%)
-    `
-    )
-}
+//     menuBackground.style.setProperty('transform',
+//     `
+//       translate(${menuCoords.left}px,${menuCoords.top + window.scrollY}px)
+//       scaleX(${menuCoords.width/100})  
+//       scaleY(${menuCoords.height/100})
+//     `
+//     )
 
-function handleLeave(params) {
-    const menu = this.querySelector('.menu')
+//     arrow.style.setProperty('transform',
+//     `
+//       translate(${menuCoords.left + (menuCoords.width / 2) - 7}px,${menuCoords.top - navCoords.top}px)
+//       rotate(45deg) translateY(-50%)
+//     `
+//     )
+// }
 
-    menu.classList.remove('menu-enter','menu-enter-active')
+// function handleLeave(params) {
+//     const menu = this.querySelector('.menu')
+
+//     menu.classList.remove('menu-enter','menu-enter-active')
    
-    menu.classList.add('menu-leave')
-    menuBackground.classList.remove('open')
-    arrow.classList.remove('open')
+//     menu.classList.add('menu-leave')
+//     menuBackground.classList.remove('open')
+//     arrow.classList.remove('open')
 
-    setTimeout(() => menu.classList.add('menu-leave-active'), 50);
+//     setTimeout(() => menu.classList.add('menu-leave-active'), 50);
 
-    setTimeout(() => menu.classList.remove('menu-leave', 'menu-leave-active'), 200);
-}
+//     setTimeout(() => menu.classList.remove('menu-leave', 'menu-leave-active'), 200);
+// }
