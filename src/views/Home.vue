@@ -27,10 +27,10 @@
                 <h3 class="mt-6 text-sm text-gray-500">
                     <a href="#">
                     <span class="absolute inset-0"></span>
-                    Self-Improvement
+                    Section 2
                     </a>
                 </h3>
-                <p class="text-base font-semibold text-gray-900">Journals and note-taking</p>
+                <p class="text-base font-semibold text-gray-900">Image Pin While Scrolling</p>
                 </div>
 
                 <div class="group relative">
