@@ -12,10 +12,10 @@
                 <h3 class="mt-6 text-sm text-gray-500">
                     <a href="#">
                     <span class="absolute inset-0"></span>
-                    Desk and Office
+                    Section 1
                     </a>
                 </h3>
-                <p class="text-base font-semibold text-gray-900">Work from home accessories</p>
+                <p class="text-base font-semibold text-gray-900">Stripe Follow-Along Menu</p>
                 </div>
 
                 <div class="group relative">
