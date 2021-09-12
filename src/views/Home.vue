@@ -10,10 +10,12 @@
                     <img src="../assets/images/8fe7cbb2ec15c69f0d400d1aaaaf03b8.png" alt="Desk with leather desk pad, walnut desk organizer, wireless keyboard and mouse, and porcelain mug." class="w-full h-full object-center object-cover">
                 </div>
                 <h3 class="mt-6 text-sm text-gray-500">
-                    <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Section 1
-                    </a>
+                    <router-link to="/section-1">
+                        <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Section 1
+                        </a>
+                    </router-link>
                 </h3>
                 <p class="text-base font-semibold text-gray-900">Stripe Follow-Along Menu</p>
                 </div>
