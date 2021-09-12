@@ -100,7 +100,7 @@
         </div>
         <div class="col-2 ml-4">
           <div>
-            <img src="image1.png" class="image-one" alt="screenshot">
+            <img src="../assets/images/image1.png" class="image-one" alt="screenshot">
           </div>
         </div>
       </div>
@@ -113,7 +113,7 @@
         </div>
         <div class="col-2 ml-4">
           <div>
-            <img src="image2.png" class="image-two invisible" alt="screenshot">
+            <img src="../assets/images/image2.png" class="image-two invisible" alt="screenshot">
           </div>
         </div>
       </div>
@@ -126,7 +126,7 @@
         </div>
         <div class="col-2 ml-4">
           <div>
-            <img src="image3.png" class="image-three invisible" alt="screenshot">
+            <img src="../assets/images/image3.png" class="image-three invisible" alt="screenshot">
           </div>
         </div>
       </div>
