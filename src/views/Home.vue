@@ -25,10 +25,12 @@
                     <img src="https://tailwindui.com/img/ecommerce-images/home-page-02-edition-02.jpg" alt="Wood table with porcelain mug, leather journal, brass pen, leather key ring, and a houseplant." class="w-full h-full object-center object-cover">
                 </div>
                 <h3 class="mt-6 text-sm text-gray-500">
-                    <a href="#">
-                    <span class="absolute inset-0"></span>
-                    Section 2
-                    </a>
+                    <router-link to="/section-2">
+                        <a href="#">
+                        <span class="absolute inset-0"></span>
+                        Section 2
+                        </a>
+                    </router-link>
                 </h3>
                 <p class="text-base font-semibold text-gray-900">Image Pin While Scrolling</p>
                 </div>
