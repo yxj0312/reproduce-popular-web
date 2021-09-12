@@ -293,3 +293,369 @@
       </nav>
     </header>
 </template>
+
+<script>
+export default {
+  mounted() {
+    const menuItems = document.querySelectorAll('nav ul li')
+    const menuBackground = document.querySelector('.menu-background')
+    const nav = document.querySelector('nav ul')
+    const arrow = document.querySelector('.arrow')
+
+    menuItems.forEach(menuItem => menuItem.addEventListener('mouseenter', handleEnter))
+    menuItems.forEach(menuItem => menuItem.addEventListener('mouseleave', handleLeave))
+
+    function handleEnter() {
+        const menu = this.querySelector('.menu')
+
+          menu.classList.add('menu-enter')
+          menuBackground.classList.add('open')
+          arrow.classList.add('open')
+          setTimeout(() => menu.classList.add('menu-enter-active'), 50);
+
+          const menuCoords = menu.getBoundingClientRect()
+          const navCoords = nav.getBoundingClientRect()
+
+          // menuBackground.style.setProperty('width',`${menuCoords.width}px`)
+          // menuBackground.style.setProperty('height',`${menuCoords.height}px`)
+          // menuBackground.style.setProperty('top',`${menuCoords.top + window.scrollY}px`)
+          // menuBackground.style.setProperty('left',`${menuCoords.left}px`)
+
+          menuBackground.style.setProperty('transform',
+          `
+            translate(${menuCoords.left}px,${menuCoords.top + window.scrollY}px)
+            scaleX(${menuCoords.width/100})  
+            scaleY(${menuCoords.height/100})
+          `
+          )
+
+          arrow.style.setProperty('transform',
+          `
+            translate(${menuCoords.left + (menuCoords.width / 2) - 7}px,${menuCoords.top - navCoords.top}px)
+            rotate(45deg) translateY(-50%)
+          `
+          )
+      }
+
+      function handleLeave(params) {
+          const menu = this.querySelector('.menu')
+
+          menu.classList.remove('menu-enter','menu-enter-active')
+        
+          menu.classList.add('menu-leave')
+          menuBackground.classList.remove('open')
+          arrow.classList.remove('open')
+
+          setTimeout(() => menu.classList.add('menu-leave-active'), 50);
+
+          setTimeout(() => menu.classList.remove('menu-leave', 'menu-leave-active'), 200);
+      }
+  },  
+}
+</script>
+
+<style>
+  @import url('https://fonts.googleapis.com/css?family=Open+Sans:400,600');
+
+  /* http://meyerweb.com/eric/tools/css/reset/
+    v2.0 | 20110126
+    License: none (public domain)
+  */
+
+  html, body, div, span, applet, object, iframe,
+  h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+  a, abbr, acronym, address, big, cite, code,
+  del, dfn, em, img, ins, kbd, q, s, samp,
+  small, strike, strong, sub, sup, tt, var,
+  b, u, i, center,
+  dl, dt, dd, ol, ul, li,
+  fieldset, form, label, legend,
+  table, caption, tbody, tfoot, thead, tr, th, td,
+  article, aside, canvas, details, embed,
+  figure, figcaption, footer, header, hgroup,
+  menu, nav, output, ruby, section, summary,
+  time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+  }
+  /* HTML5 display-role reset for older browsers */
+  article, aside, details, figcaption, figure,
+  footer, header, hgroup, menu, nav, section {
+    display: block;
+  }
+  body {
+    line-height: 1;
+  }
+  ol, ul {
+    list-style: none;
+  }
+  blockquote, q {
+    quotes: none;
+  }
+  blockquote:before, blockquote:after,
+  q:before, q:after {
+    content: '';
+    content: none;
+  }
+  table {
+    border-collapse: collapse;
+    border-spacing: 0;
+  }
+
+  body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    color: #2c3e50;
+    background: linear-gradient(-45deg, #19C5FE, #4553FF);
+    min-height: 100vh;
+    line-height: 1.5;
+  }
+
+  nav ul {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+  }
+
+  nav ul li {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+  }
+
+  button {
+    background: none;
+    color: white;
+    border: none;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px 20px;
+  }
+
+  button:hover {
+    color:lightgray
+  }
+
+  .menu-background {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    transition: all 200ms;
+    transform-origin: 0 0;
+  }
+
+  .menu-background.open {
+    opacity: 1;
+  }
+
+  .arrow {
+    opacity: 0;
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: white;
+    transform: rotate(45deg) translateY(-50%);
+    transition: all 200ms;
+  }
+
+  .arrow.open {
+    opacity: 1;
+  }
+
+  .menu-background.next {
+    top: 200px;
+    left: 200px;
+    width: 300px;
+    height: 300px;
+  }
+
+  .menu {
+    display: none;
+    position: absolute;
+    /* background: white; */
+    /* background: rgba(0,255,0, 0.5); */
+    border-radius: 5px;
+    padding: 24px 40px;
+    /* max-width: 600px; */
+    top: 100%;
+    transition: opacity 500ms ease-in, transform 500ms;
+  }
+
+  .menu.menu-enter {
+    display: block;
+    opacity: 0;
+  }
+
+  .menu.menu-enter-active {
+    opacity: 1;
+  }
+
+  .menu.menu-leave {
+    display: block;
+    opacity: 1;
+  }
+
+  .menu.menu-leave-active {
+    opacity: 0;
+  }
+
+  .menu-products {
+    width: 560px;
+  }
+
+  .menu-products .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 100px;
+  }
+
+  .menu-products h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .menu-products ul {
+    display: block;
+    margin: 0;
+    margin-top: 20px;
+  }
+
+  .menu-products li {
+    display: block;
+    padding: 0;
+  }
+
+  .menu-products li:not(:first-child) {
+    margin-top: 18px;
+  }
+
+  .menu-products li a {
+    display: flex;
+    align-items: center;
+    color: #4B5563;
+    text-decoration: none;
+  }
+
+  .menu-products li a:hover {
+    color: #111827;
+  }
+
+  .menu-products li a svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .menu-products li a > div {
+    margin-left: 8px;
+  }
+
+  .menu-products .title {
+    font-weight: bold;
+  }
+
+  .menu-products .description {
+    font-size: 14px;
+    color: #6B7280
+  }
+
+
+  .menu-developers {
+    width: 400px;
+  }
+
+  .menu-developers h3 {
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+
+  .menu-developers p {
+    font-size: 14px;
+  }
+
+  .menu-developers .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 60px;
+    margin-top: 24px;
+  }
+
+  .menu-developers h4 {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .menu-developers ul {
+    display: block;
+    margin: 0;
+    margin-top: 10px;
+  }
+
+  .menu-developers li {
+    display: block;
+    padding: 0;
+    margin-top: 8px;
+  }
+
+  .menu-developers li a {
+    color: #4B5563;
+    text-decoration: none;
+  }
+
+  .menu-developers li a:hover {
+    color: #111827;
+  }
+
+  .menu-company {
+    width: 200px;
+  }
+
+  .menu-company ul {
+    display: block;
+    margin: 0;
+  }
+
+  .menu-company li {
+    display: block;
+    padding: 0;
+  }
+
+  .menu-company li:not(:first-child) {
+    margin-top: 18px;
+  }
+
+  .menu-company li a {
+    display: flex;
+    align-items: center;
+    color: #4B5563;
+    text-decoration: none;
+  }
+
+  .menu-company li a:hover {
+    color: #111827;
+  }
+
+  .menu-company li a svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .menu-company li a span {
+    margin-left: 8px;
+  }
+
+
+</style>
