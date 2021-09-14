@@ -42,10 +42,10 @@
                 <h3 class="mt-6 text-sm text-gray-500">
                     <a href="#">
                     <span class="absolute inset-0"></span>
-                    Travel
+                    Section 3
                     </a>
                 </h3>
-                <p class="text-base font-semibold text-gray-900">Daily commute essentials</p>
+                <p class="text-base font-semibold text-gray-900">Event Table Layout</p>
                 </div>
             </div>
             </div>
