@@ -15,3 +15,5 @@ Glob Import
 ### Require.contents
 
 This is a feature of webpack that allows you to look at the files of a directory at runtime. Vite has an equivalent called Glob Import, which you’ll want to use instead.
+
+[awesome-vite](https://github.com/vitejs/awesome-vite)
